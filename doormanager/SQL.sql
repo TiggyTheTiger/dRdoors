@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS `fivem_doors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locked` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+
+
+/*!40000 ALTER TABLE `fivem_doors` DISABLE KEYS */;
+INSERT INTO `fivem_doors` (`id`, `locked`) VALUES
+	(1, 0),
+	(2, 1),
+	(3, 1),
+	(4, 0),
+	(5, 1),
+	(6, 0),
+	(7, 1),
+	(8, 1),
+	(9, 1),
+	(10, 1),
+	(11, 0),
+	(12, 1),
+	(13, 0),
+	(14, 1),
+	(15, 0);
+/*!40000 ALTER TABLE `fivem_doors` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

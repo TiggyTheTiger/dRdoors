@@ -6,7 +6,7 @@ AddEventHandler("doormanager:s_openDoor", function(doorId)
     local isDoorLocked = GetDoorStatus(doorId)
       
         if isDoorLocked == 1 then
-            if IsPlayerAceAllowed(_source, "agc.unlockdoor") then
+            if IsPlayerAceAllowed(_source, "drdoor.unlockdoor") then
                 TriggerClientEvent("doormanager:c_openDoor", -1, doorId)
                 SetDoorStatus(doorId,0)                   
             else
@@ -22,7 +22,7 @@ AddEventHandler("doormanager:s_closeDoor", function(doorId)
     local isDoorLocked = GetDoorStatus(doorId)
     
     if isDoorLocked == 0 then
-        if IsPlayerAceAllowed(_source, "agc.unlockdoor") then
+        if IsPlayerAceAllowed(_source, "drdoor.unlockdoor") then
             TriggerClientEvent("doormanager:c_closeDoor", -1, doorId)
             SetDoorStatus(doorId,1)       
         else

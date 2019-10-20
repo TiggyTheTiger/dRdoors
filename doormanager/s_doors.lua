@@ -1,3 +1,5 @@
+
+
 RegisterServerEvent("doormanager:s_openDoor")
 AddEventHandler("doormanager:s_openDoor", function(doorId)
 
@@ -33,6 +35,8 @@ end)
 
 RegisterServerEvent("doormanager:s_syncDoors")
 AddEventHandler('doormanager:s_syncDoors', function()
+
+    MySQL.Async.execute("UPDATE fivem_doors SET locked = @locked", {['@locked'] = 1})
 
     local _source = source    
 
